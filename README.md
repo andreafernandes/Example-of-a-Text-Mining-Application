@@ -37,8 +37,10 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 The following code and gazateers was generated after using 500 documents to generate patterns (from which the below rules were written) that would describe the user's appetite. 
 
 GAZATEER LISTs 
+ 
 
-Add table of list here. 
+![WordScreenshot] (/Users/andreafernandes/Google Drive/2_Research/PhD work/PhD work/Phase_2_Data_Extraction/Appetite_GATE_work/appetite/appetite version 3/Images_for_Git/Test.png)
+
 
 ```
 Phase: Appetite
