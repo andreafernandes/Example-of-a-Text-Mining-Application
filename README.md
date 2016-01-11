@@ -37,7 +37,7 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 
 The following JAPE code and [gazateers](https://gate.ac.uk/sale/tao/splitch13.html) were generated after using 500 documents, each of which had the term 'appetite' mentioned and each of which was coded by two separate annotators to describe "good" or "bad appetite". 
 
-Rules to code appetite were generated beforehand: [GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png). 
+Rules to code appetite were generated beforehand: ![GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png). 
 
 
 
