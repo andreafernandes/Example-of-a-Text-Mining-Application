@@ -34,42 +34,502 @@
         <h1>
 <a id="appetite-textmining-code" class="anchor" href="#appetite-textmining-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>appetite-textmining-code</h1>
 
-<p><strong>Using GATE to text mine 'appetite'</strong></p>
+<p><strong>Using <a href="https://gate.ac.uk/family/">GATE</a> to text mine a data variable, which happens to be 'appetite'</strong></p>
 
-<p>This repo is a collection of my GATE code.</p>
+<p>This repo is a record of my <a href="https://gate.ac.uk/sale/tao/splitch8.html#chap:jape">JAPE</a> code to text mine the variable "appetite" within a bespoke psychiatric health record database, <a href="http://www.slam.nhs.uk/about/core-facilities/cris">CRIS</a>. </p>
 
-<p><em>More coming soon...</em></p>
-
-<hr>
+<p>It is mainly for my own benefit but do feel free to contact me for suggestions, questions or constructive feedback!</p>
 
 <h2>
 <a id="about-author" class="anchor" href="#about-author" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Author</h2>
 
 <h3>
-<a id="contact-details" class="anchor" href="#contact-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact Details</h3>
+<a id="details-and-contact-information" class="anchor" href="#details-and-contact-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Details and Contact Information</h3>
 
 <table>
 <thead>
 <tr>
-<th align="left">Author</th>
-<th align="left">Email Address</th>
+<th align="left">Author Name</th>
+<th align="left">Andrea Fernandes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Andrea Fernandes, PhD student</td>
+<td align="left">Occupation</td>
+<td align="left">PhD student, 2nd Year</td>
+</tr>
+<tr>
+<td align="left">Email</td>
 <td align="left"><a href="mailto:andrea.fernandes@kcl.ac.uk">andrea.fernandes@kcl.ac.uk</a></td>
+</tr>
+<tr>
+<td align="left">University</td>
+<td align="left">King's College London</td>
+</tr>
+<tr>
+<td align="left">Funding</td>
+<td align="left">MHRUK - Mental Health Research UK</td>
 </tr>
 </tbody>
 </table>
 
-<h3>
-<a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgements</h3>
+<hr>
 
-<p>MHRUK
-[add pic]</p>
+<p>Purpose of 'Appetite Variable' -<br>
+This code will highlight the term 'appetite' AND any terms which collectively describe either 'good' or 'poor' appetite.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Data source</th>
+<th align="left">
+<a href="http://www.slam.nhs.uk/about/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20core-facilities/cris">CRIS</a> - Pseudonymised                           electronic psychiatric healthcare                           records</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Data extracted</td>
+<td align="left">Clinical notes with the term                            'appetite' menioned were extracted                           and processed to be read by GATE.                           Contact author for details on this.</td>
+</tr>
+<tr>
+<td align="left">Text-mining software</td>
+<td align="left"><a href="www.gate.ac.uk">GATE</a></td>
+</tr>
+</tbody>
+</table>
 
 <hr>
+
+<h2>
+<a id="training-data" class="anchor" href="#training-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training Data</h2>
+
+<p>The following JAPE code and <a href="https://gate.ac.uk/sale/tao/splitch13.html">gazateers</a> were generated after using 500 documents, each of which had the term 'appetite' mentioned and each of which was coded by two separate annotators to describe "good" or "bad appetite". </p>
+
+<p>Rules to code appetite were generated beforehand: <img src="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png" alt="GOLD STANDARD RULES">. </p>
+
+<h4>
+<a id="gazateers" class="anchor" href="#gazateers" aria-hidden="true"><span class="octicon octicon-link"></span></a>GAZATEERS</h4>
+
+<p>A Gazateer is - basically -  a list of terms stored in a .lst file. </p>
+
+<p>I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from the Training Set)</p>
+
+<p>Gazateer 1: appetite_gazateer.lst file </p>
+
+<p>This gazateer that picks up "appetite" in all potential forms</p>
+
+<pre><code>Appetite
+appetite
+appettite
+Appettite
+appetitte
+Appetitte
+apetite
+Apetite
+apetitte
+Apetitte
+apettite
+Apettite
+appettitte
+Appettitte
+appetite:
+Appetite:
+appetite-
+Appetite-
+appetite
+
+</code></pre>
+
+<p>Gazateer 2: appetite poor describe.lst </p>
+
+<p>This is a list of terms that describe poor appetite. </p>
+
+<pre><code>Absent 
+absent
+Decreasing
+decreasing
+Decreased
+decreased
+Decrease in
+decrease in
+deficit
+Deficit
+down
+Down
+gone
+gone down
+Gone
+Gone down
+loss of
+Loss of
+losing
+Losing
+loosing
+lack of
+Lack of
+Loss
+loss
+Lost
+lost
+Low 
+low
+little
+Little
+Lacks
+lacks
+Lack
+lack
+Lacking 
+lacking
+No 
+no
+No interest
+no interest
+not great
+not as good
+not very well
+Poor
+poor
+reduction
+Reduction
+Reduced
+reduced
+Smaller
+smaller
+Suppressed
+suppressed
+Suppress
+suppress
+Suppression
+suppression
+Worse
+worse
+Worsening
+worsening
+</code></pre>
+
+<p>Gazateer 3: appetite good describe.lst</p>
+
+<pre><code>alright
+Alright
+denies problems with
+denies issues with
+eats well
+Eats well
+Eating well
+eating well
+excellent
+Excellent
+fine
+Fine
+fair
+Fair
+Good
+good
+great
+Great
+has appetite
+Has appetite
+healthy
+Healthy
+intact
+Intact
+Not too bad
+not too bad
+no problem
+no problems
+No problems
+No problem
+no concerns
+No concerns
+no concern
+No concern
+No difficulties
+no difficulties
+No difficulty
+no difficulty
+No issue
+No issues
+no issue
+no issues
+normal
+Normal
+ok
+okay
+OK
+Ok
+reasonable
+Reasonable 
+Regular
+regular
+stable
+Stable
+satisfactory
+Satisfactory
+steady
+Steady
+Unremarkable
+unremarkable
+Unimpaired
+unimpaired
+</code></pre>
+
+<p>Gazateer 4: negation.lst</p>
+
+<p>This .lst file was generated to be able to interpret negation terms used with "good appetite" or "bad appetite". </p>
+
+<p>For example, "he <em>DID NOT</em> have bad appetite". I need to write JAPE to code this sentence as "NOT bad appeite"</p>
+
+<pre><code>never
+Never
+Denied
+denied
+did not
+no
+No
+denies
+Denies
+does not report
+Does not report
+not been
+not
+Not
+Not been
+never had
+Never had
+Not having 
+not having
+was not
+</code></pre>
+
+<p>Gazateer 5: symptom_gazateer.lst </p>
+
+<p>These were symptoms I wanted to <em>IGNORE</em> but which kept being mentioned with "appetite". I generate this file to then write JAPE code to ignore the below symptoms. </p>
+
+<pre><code>sleep
+Sleep
+Memory
+memory
+Concentration
+concentration
+Weight
+weight
+Depression
+depression
+depressed
+Depressed
+Energy
+energy
+Mood
+mood
+</code></pre>
+
+<p>These .lst files are then saved into a single  .def file, which looks like so:</p>
+
+<pre><code>appetite_gazateer.lst:appetite_mention
+appetite_poor_describe.lst:appetite_description:poor
+appetite_good_describe.lst:appetite_description:good
+negation.lst:negationterms:negation
+symptom_gazateer.lst:Symptom:symptoms
+</code></pre>
+
+<p>I saved this file as appetite.def</p>
+
+<p>Notice that each of my .lst files are listed in this appetite.def file. </p>
+
+<p>Each listing is FOLLOWED BY a format similar to this:</p>
+
+<p>xxxx.lst file: yyyyyy: zzzzzz </p>
+
+<p>The "yyyyyy" and "zzzzzz" are known as MAJOR TYPE and MINOR TYPE. </p>
+
+<p>In the JAPE code, i go one to use these MAJOR TYPE and MINOR TYPE terms to give my coding more flexibility. You'll see this below. </p>
+
+<h4>
+<a id="jape-code" class="anchor" href="#jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>JAPE CODE</h4>
+
+<p>OK so now that I have my list of terms that I am confident described "good" and "bad appetite" in CRIS, I will start on JAPE code. </p>
+
+<p>Jape code writing - Several days pass</p>
+
+<h6>
+<a id="final-jape-code" class="anchor" href="#final-jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>FINAL JAPE code</h6>
+
+<pre><code>Phase: Appetite
+Input: Lookup Token Split
+Options: control = appelt
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 10
+
+(
+
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+
+    ({Lookup.minorType == "good"} | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+
+):AppetiteDescription
+--&gt;
+:AppetiteDescription.Appetite = {rule = "AppetiteDescription1", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "no"}
+
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 9
+(
+
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+
+     {Token.category == ":", Token.category != ","} 
+    ({Lookup.minorType == "good"} | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+
+):AppetiteDescription
+--&gt;
+:AppetiteDescription.Appetite = {rule = "AppetiteDescription2", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "no"}
+
+
+
+
+Rule: DescriberThenAppetite
+Priority: 9
+(
+
+    ({Lookup.minorType == "good"} | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+     {Token.category != ","}
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+
+):AppetiteDescription
+--&gt;
+:AppetiteDescription.Appetite = {rule = "AppetiteDescription3", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "no"}
+
+
+
+
+Rule: DescriberThenAppetite
+Priority: 8
+(
+
+    ({Lookup.minorType == "good"} | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+     {Token.category != ","}
+    ({Token,!Split})[0,3]
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+
+):AppetiteDescription
+--&gt;
+:AppetiteDescription.Appetite = {rule = "AppetiteDescription4", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "no"}
+
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 7
+(
+
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+    ({Token,!Split})[0,3]
+     {Token.category != ","}
+    ({Lookup.minorType == "good"} | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+
+):AppetiteDescription
+--&gt;
+:AppetiteDescription.Appetite = {rule = "AppetiteDescription5", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "no"}
+
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 7
+(
+
+    ({Lookup.minorType == negation}):Negationwords
+    ({Token,!Split})[0,3]
+    ({Lookup.minorType == "good"}  | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+    ({Token,!Split})[0,3]
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+
+):AppetiteDescriptionwithNegation
+--&gt;
+:AppetiteDescriptionwithNegation.Appetite = {rule = "AppetiteDescriptionwithNegation6", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "yes"}
+
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 6
+(
+
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly   
+    ({Token,!Split})[0,3]
+    ({Lookup.minorType == negation}):Negationwords
+    ({Token,!Split})[0,3]
+    ({Lookup.minorType == "good"}  | 
+     {Lookup.minorType == "poor"}):descriptorsOfAppetite
+
+):AppetiteDescriptionwithNegation
+--&gt;
+:AppetiteDescriptionwithNegation.Appetite = {rule = "AppetiteDescriptionwithNegation7", AppetiteType = :descriptorsOfAppetite.Lookup.minorType, ApplyNegation = "yes"}
+
+
+
+
+Rule: AppetiteThenDescriber
+Priority: 6
+(
+
+    ({Token.string =~ "[Nn]o"})
+    ({!Token.string == "change"})
+    ({Token,!Split})[0,3]
+    ({Token.string =~ "[Aa]ppetite", !Lookup.MajorType == "Symptom"}):SymptomAppetiteOnly
+    ({Token.string =~ "[Pp]roblems"})
+
+):AppetiteDescriptionwithNegation
+--&gt;
+:AppetiteDescriptionwithNegation.Appetite = {rule = "AppetiteDescriptionwithNegation8", AppetiteType = "good" ApplyNegation = "no"}
+</code></pre>
+
+<hr>
+
+<h1>
+<a id="testing-the-gazateer-and-jape-code" class="anchor" href="#testing-the-gazateer-and-jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>TESTING THE GAZATEER and JAPE CODE</h1>
+
+<p>We need to some Gold Standard data to test the above Gazateers and Code. </p>
+
+<h3>
+<a id="gold-standard-data" class="anchor" href="#gold-standard-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gold Standard data</h3>
+
+<p>500 documents extracted from CRIS. Each document contains the word "appetite"</p>
+
+<p>These documents were annotated by two individuals to code good or bad appeite accoding to the <a href="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png">GOLD STANDARD RULES</a>. </p>
+
+<p>Ensure that inter-rater reliability is above 85% at least to minimise erroneous performance testing. </p>
+
+<h3>
+<a id="performance-testing" class="anchor" href="#performance-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance Testing</h3>
+
+<p>Testing on Gold Standard data</p>
+
+<h6>
+<a id="precision" class="anchor" href="#precision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precision:</h6>
+
+<h6>
+<a id="recall" class="anchor" href="#recall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall:</h6>
+
+<p>Comparison to Machine Learning Process using GATE machine learning:</p>
+
+<h6>
+<a id="precision-1" class="anchor" href="#precision-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precision:</h6>
+
+<h6>
+<a id="recall-1" class="anchor" href="#recall-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall:</h6>
       </section>
     </div>
 
