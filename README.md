@@ -45,9 +45,9 @@ Rules to code appetite were generated beforehand and were kept as simple as poss
 
 A Gazateer is - basically -  a list of terms stored in a .lst file. 
 
-I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from the Training Set). These are in the "gazateer" repo. 
+I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from scoping exercises on CRIS, whose aim was to determine the types of words used to describe appetite in CRIS). 
 
-Here's the list of .lst files I generated: 
+Here's the list of .lst files I generated. These are in the "gazateer" repository: 
 
 
 
@@ -77,9 +77,9 @@ symptom_gazateer.lst:Symptom:symptoms
 
 #### JAPE CODE
 
-This was created after going through the Training set and generating a set of "patterns" or themes in the text that appeared consistently or often in the documents, when describing appetite. 
+This jape code was written after going through the Training set data (500 documents) and generating a set of "patterns" or themes in the text that appeared consistently or often in the documents, when describing appetite. 
 
-Based on the themes I wrote the following JAPE code.
+Based on the themes I wrote the following JAPE code, in chunks. I have each chunk priority to be run, according to how often these themes were mentioned in the text.
 
 
 
