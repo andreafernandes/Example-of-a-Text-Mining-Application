@@ -36,6 +36,7 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 
 
 *************
+##Basic Steps
 I followed the **following steps** to create a functioning code to textmine appetite from CRIS records. 
 
 **1) Define Problem**
@@ -85,7 +86,7 @@ Test out final Gazateer list and JAPE on Gold-Standard
 
 
 *************
-###GATE Application to Extract Appetite
+##GATE Application to Extract Appetite
 
 
 **Result of Scoping Exercise**
@@ -282,7 +283,7 @@ Priority: 6
 
 
 ***********************************
-# TESTING THE GAZATEER and JAPE CODE
+## Testing the Application
 
 We need to some Gold Standard data to test the above Gazateers and Code. 
 
@@ -290,14 +291,14 @@ We need to some Gold Standard data to test the above Gazateers and Code.
 
 500 documents extracted from CRIS. Each document contains the word "appetite"
 
-These documents were annotated by two individuals to code good or bad appeite accoding to the [GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png). 
+These documents were annotated by two individuals to code good or bad appeite accoding to the **GOLD STANDARD RULES**
 
-The inter-rater reliability was quite high - above 85% (but i don't have exact figures). 
+I didnt perform inter-rater reliability test because it is a simple application. 
 
 
 ###Final Performance
 
-Testing on Gold Standard data (500 documents) generated a precision of 80% and a recall of 73%.
+Testing on Gold Standard data (500 documents) generated a **_Precision_** of **80%** and a **_Recall_** of **73%.**
 
 
 
