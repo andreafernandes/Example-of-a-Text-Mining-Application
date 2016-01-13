@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Appetite-textmining-code : Using GATE to text mine &#39;appetite&#39;">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Appetite-textmining-code</title>
+    <meta charset="UTF-8">
+    <title>Appetite-textmining-code by andreafernandes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Appetite-textmining-code</h1>
+      <h2 class="project-tagline">Using GATE to text mine &#39;appetite&#39;</h2>
+      <a href="https://github.com/andreafernandes/appetite-textmining-code" class="btn">View on GitHub</a>
+      <a href="https://github.com/andreafernandes/appetite-textmining-code/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/andreafernandes/appetite-textmining-code/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/andreafernandes/appetite-textmining-code">View on GitHub</a>
-
-          <h1 id="project_title">Appetite-textmining-code</h1>
-          <h2 id="project_tagline">Using GATE to text mine &#39;appetite&#39;</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/andreafernandes/appetite-textmining-code/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/andreafernandes/appetite-textmining-code/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="appetite-textmining-code" class="anchor" href="#appetite-textmining-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>appetite-textmining-code</h1>
 
-<p><strong>Using <a href="https://gate.ac.uk/family/">GATE</a> to text mine a data variable, which happens to be 'appetite'</strong></p>
+<p><strong>Using Text mining software - <a href="https://gate.ac.uk/family/">GATE</a> - to extract a data variable from free text clinical notes.</strong></p>
 
 <p>This repo is a record of my <a href="https://gate.ac.uk/sale/tao/splitch8.html#chap:jape">JAPE</a> code to text mine the variable "appetite" within a bespoke psychiatric health record database, <a href="http://www.slam.nhs.uk/about/core-facilities/cris">CRIS</a>. </p>
 
-<p>It is mainly for my own benefit but do feel free to contact me for suggestions, questions or constructive feedback!</p>
+<p>It is mainly for my own records and this archive functions as a link to send out to anyone interested. </p>
+
+<p>Do feel free to contact me for suggestions, questions or constructive feedback!</p>
 
 <h2>
 <a id="about-author" class="anchor" href="#about-author" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Author</h2>
@@ -75,7 +65,7 @@
 
 <hr>
 
-<p>Purpose of 'Appetite Variable' -<br>
+<p><strong>Purpose of 'Appetite Variable'</strong><br>
 This code will highlight the term 'appetite' AND any terms which collectively describe either 'good' or 'poor' appetite.</p>
 
 <table>
@@ -88,24 +78,71 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 </thead>
 <tbody>
 <tr>
-<td align="left">Data extracted</td>
-<td align="left">Clinical notes with the term                            'appetite' menioned were extracted                           and processed to be read by GATE.                           Contact author for details on this.</td>
+<td align="left"><strong>Data extracted</strong></td>
+<td align="left"><strong>Clinical notes with the term                          'appetite' menioned were extracted                           and processed to be read by GATE.                           Contact author for details on this.</strong></td>
 </tr>
 <tr>
-<td align="left">Text-mining software</td>
-<td align="left"><a href="www.gate.ac.uk">GATE</a></td>
+<td align="left"><strong>Text-mining software</strong></td>
+<td align="left"><strong><a href="www.gate.ac.uk">GATE</a></strong></td>
 </tr>
 </tbody>
 </table>
 
 <hr>
 
-<h2>
-<a id="training-data" class="anchor" href="#training-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training Data</h2>
+<p>I followed the <strong>following steps</strong> to create a functioning code to textmine appetite from CRIS records. </p>
 
-<p>The following JAPE code and <a href="https://gate.ac.uk/sale/tao/splitch13.html">gazateers</a> were generated after using 500 documents, each of which had the term 'appetite' mentioned and each of which was coded by two separate annotators to describe "good" or "bad appetite". </p>
+<p><strong>1) Define Problem</strong></p>
 
-<p>Rules to code appetite were generated beforehand and were kept as simple as possible: <img src="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png" alt="GOLD STANDARD RULES"> </p>
+<p>Define and think through what it is you want to extract. Think of your variable outcome. What type of data would you like your outcome variable to display? What do you want this variable to inform you of? </p>
+
+<p>Write a set of rules that </p>
+
+<p>i) define your variable of interest and 
+ii) what you want out of your textmining code eventually. Give some examples.</p>
+
+<p><strong>2) Scoping Exercise</strong></p>
+
+<p>To help with understanding what it is what you want from the free-text data, conduct a scoping exercise. Go through around 500 to 1000 documents, relevant to your variable of interest. </p>
+
+<p>During this exercise, familiarise yourself with how your variable of interest is being mentioned, what are common terms/words associated with this variable. What terms make your variable of interest redundant or negate the variable. </p>
+
+<p><strong>3) Re-define Problem</strong></p>
+
+<p>After doing the scoping exercise, go back to your definition of and make any changes that you think will make your definition of the problem explicit. Give examples and lists of terms if you think it will help with the definition. </p>
+
+<p><strong>4) Thorough Consultation Process</strong></p>
+
+<p>Set up a thorough consultation with relevant colleagues and supervisors (and experts in the field) at this point to make sure you've covered your bases with defining your variable of interest. Make any revisions at this point to your document. </p>
+
+<p><strong>At this stage you should happy with the definition of the Variable. You should have thought about and developed resolutions to all possible scenarios in which your variable could be mentioned in free-text.</strong></p>
+
+<p><strong>5) Extract documents for Training Set and Gold Standard.</strong> </p>
+
+<p>Extract 500 documents for each set.</p>
+
+<p><strong>6) Annotate Training Set and Gold Standard</strong></p>
+
+<p>Based on your document from 3) annotate the Training Set and Gold Standard sets on the same day. </p>
+
+<p>If the variable your interested is complicated, you should get two annotators to annotate your Training Set and check Inter-rater Reliability to minimise bias or skewed annotations. </p>
+
+<p><strong>7) Write JAPE and Create Gazateers</strong></p>
+
+<p>Based on Training Set and Scoping Exercise Begin to Write JAPE and Create Necessary Gazateers. You can continuously test your JAPE and Gazateers out on smaller document sets to make sure the JAPE is doing what you want it to do. </p>
+
+<p><strong>8) Evaluate Application</strong></p>
+
+<p>Test out final Gazateer list and JAPE on Gold-Standard</p>
+
+<hr>
+
+<h3>
+<a id="gate-application-to-extract-appetite" class="anchor" href="#gate-application-to-extract-appetite" aria-hidden="true"><span class="octicon octicon-link"></span></a>GATE Application to Extract Appetite</h3>
+
+<p><strong>Result of Scoping Exercise</strong></p>
+
+<p>Rules to code appetite were generated were kept as simple as possible: <img src="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png" alt="GOLD STANDARD RULES"> </p>
 
 <h4>
 <a id="gazateers" class="anchor" href="#gazateers" aria-hidden="true"><span class="octicon octicon-link"></span></a>GAZATEERS</h4>
@@ -311,18 +348,15 @@ Priority: 6
 <a id="final-performance" class="anchor" href="#final-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Performance</h3>
 
 <p>Testing on Gold Standard data (500 documents) generated a precision of 80% and a recall of 73%.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Appetite-textmining-code maintained by <a href="https://github.com/andreafernandes">andreafernandes</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/andreafernandes/appetite-textmining-code">Appetite-textmining-code</a> is maintained by <a href="https://github.com/andreafernandes">andreafernandes</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
