@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Appetite-textmining-code by andreafernandes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Appetite-textmining-code</h1>
-      <h2 class="project-tagline">Using GATE to text mine &#39;appetite&#39;</h2>
-      <a href="https://github.com/andreafernandes/appetite-textmining-code" class="btn">View on GitHub</a>
-      <a href="https://github.com/andreafernandes/appetite-textmining-code/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/andreafernandes/appetite-textmining-code/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html>
 
-    <section class="main-content">
-      <h1>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Appetite-textmining-code : Using GATE to text mine &#39;appetite&#39;">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Appetite-textmining-code</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/andreafernandes/appetite-textmining-code">View on GitHub</a>
+
+          <h1 id="project_title">Appetite-textmining-code</h1>
+          <h2 id="project_tagline">Using GATE to text mine &#39;appetite&#39;</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/andreafernandes/appetite-textmining-code/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/andreafernandes/appetite-textmining-code/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="appetite-textmining-code" class="anchor" href="#appetite-textmining-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>appetite-textmining-code</h1>
 
 <p><strong>Using Text mining software - <a href="https://gate.ac.uk/family/">GATE</a> - to extract a data variable from free text clinical notes.</strong></p>
@@ -90,6 +102,9 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 
 <hr>
 
+<h2>
+<a id="basic-steps" class="anchor" href="#basic-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Steps</h2>
+
 <p>I followed the <strong>following steps</strong> to create a functioning code to textmine appetite from CRIS records. </p>
 
 <p><strong>1) Define Problem</strong></p>
@@ -137,8 +152,8 @@ ii) what you want out of your textmining code eventually. Give some examples.</p
 
 <hr>
 
-<h3>
-<a id="gate-application-to-extract-appetite" class="anchor" href="#gate-application-to-extract-appetite" aria-hidden="true"><span class="octicon octicon-link"></span></a>GATE Application to Extract Appetite</h3>
+<h2>
+<a id="gate-application-to-extract-appetite" class="anchor" href="#gate-application-to-extract-appetite" aria-hidden="true"><span class="octicon octicon-link"></span></a>GATE Application to Extract Appetite</h2>
 
 <p><strong>Result of Scoping Exercise</strong></p>
 
@@ -330,8 +345,8 @@ Priority: 6
 
 <hr>
 
-<h1>
-<a id="testing-the-gazateer-and-jape-code" class="anchor" href="#testing-the-gazateer-and-jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>TESTING THE GAZATEER and JAPE CODE</h1>
+<h2>
+<a id="testing-the-application" class="anchor" href="#testing-the-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing the Application</h2>
 
 <p>We need to some Gold Standard data to test the above Gazateers and Code. </p>
 
@@ -340,23 +355,26 @@ Priority: 6
 
 <p>500 documents extracted from CRIS. Each document contains the word "appetite"</p>
 
-<p>These documents were annotated by two individuals to code good or bad appeite accoding to the <a href="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png">GOLD STANDARD RULES</a>. </p>
+<p>These documents were annotated by two individuals to code good or bad appeite accoding to the <strong>GOLD STANDARD RULES</strong></p>
 
-<p>The inter-rater reliability was quite high - above 85% (but i don't have exact figures). </p>
+<p>I didnt perform inter-rater reliability test because it is a simple application. </p>
 
 <h3>
 <a id="final-performance" class="anchor" href="#final-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Performance</h3>
 
-<p>Testing on Gold Standard data (500 documents) generated a precision of 80% and a recall of 73%.</p>
+<p>Testing on Gold Standard data (500 documents) generated a <strong><em>Precision</em></strong> of <strong>80%</strong> and a <strong><em>Recall</em></strong> of <strong>73%.</strong></p>
+      </section>
+    </div>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/andreafernandes/appetite-textmining-code">Appetite-textmining-code</a> is maintained by <a href="https://github.com/andreafernandes">andreafernandes</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Appetite-textmining-code maintained by <a href="https://github.com/andreafernandes">andreafernandes</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
+    </div>
 
-    </section>
+    
 
-  
   </body>
 </html>
