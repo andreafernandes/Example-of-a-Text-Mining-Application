@@ -105,224 +105,31 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 
 <p>The following JAPE code and <a href="https://gate.ac.uk/sale/tao/splitch13.html">gazateers</a> were generated after using 500 documents, each of which had the term 'appetite' mentioned and each of which was coded by two separate annotators to describe "good" or "bad appetite". </p>
 
-<p>Rules to code appetite were generated beforehand: <img src="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png" alt="GOLD STANDARD RULES">. </p>
+<p>Rules to code appetite were generated beforehand and were kept as simple as possible: <img src="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png" alt="GOLD STANDARD RULES"> </p>
 
 <h4>
 <a id="gazateers" class="anchor" href="#gazateers" aria-hidden="true"><span class="octicon octicon-link"></span></a>GAZATEERS</h4>
 
 <p>A Gazateer is - basically -  a list of terms stored in a .lst file. </p>
 
-<p>I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from the Training Set)</p>
+<p>I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from scoping exercises on CRIS, whose aim was to determine the types of words used to describe appetite in CRIS). </p>
 
-<p>Gazateer 1: appetite_gazateer.lst file </p>
+<p>Here's the list of .lst files I generated. These are in the "gazateer" repository: </p>
 
-<p>This gazateer that picks up "appetite" in all potential forms</p>
+<h6>
+<a id="gazateer-1-appetite_gazateerlst-file" class="anchor" href="#gazateer-1-appetite_gazateerlst-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gazateer 1: appetite_gazateer.lst file</h6>
 
-<pre><code>Appetite
-appetite
-appettite
-Appettite
-appetitte
-Appetitte
-apetite
-Apetite
-apetitte
-Apetitte
-apettite
-Apettite
-appettitte
-Appettitte
-appetite:
-Appetite:
-appetite-
-Appetite-
-appetite
+<h6>
+<a id="gazateer-2-appetite-poor-describelst" class="anchor" href="#gazateer-2-appetite-poor-describelst" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gazateer 2: appetite poor describe.lst</h6>
 
-</code></pre>
+<h6>
+<a id="gazateer-3-appetite-good-describelst" class="anchor" href="#gazateer-3-appetite-good-describelst" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gazateer 3: appetite good describe.lst</h6>
 
-<p>Gazateer 2: appetite poor describe.lst </p>
+<h6>
+<a id="gazateer-4-negationlst" class="anchor" href="#gazateer-4-negationlst" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gazateer 4: negation.lst</h6>
 
-<p>This is a list of terms that describe poor appetite. </p>
-
-<pre><code>Absent 
-absent
-Decreasing
-decreasing
-Decreased
-decreased
-Decrease in
-decrease in
-deficit
-Deficit
-down
-Down
-gone
-gone down
-Gone
-Gone down
-loss of
-Loss of
-losing
-Losing
-loosing
-lack of
-Lack of
-Loss
-loss
-Lost
-lost
-Low 
-low
-little
-Little
-Lacks
-lacks
-Lack
-lack
-Lacking 
-lacking
-No 
-no
-No interest
-no interest
-not great
-not as good
-not very well
-Poor
-poor
-reduction
-Reduction
-Reduced
-reduced
-Smaller
-smaller
-Suppressed
-suppressed
-Suppress
-suppress
-Suppression
-suppression
-Worse
-worse
-Worsening
-worsening
-</code></pre>
-
-<p>Gazateer 3: appetite good describe.lst</p>
-
-<pre><code>alright
-Alright
-denies problems with
-denies issues with
-eats well
-Eats well
-Eating well
-eating well
-excellent
-Excellent
-fine
-Fine
-fair
-Fair
-Good
-good
-great
-Great
-has appetite
-Has appetite
-healthy
-Healthy
-intact
-Intact
-Not too bad
-not too bad
-no problem
-no problems
-No problems
-No problem
-no concerns
-No concerns
-no concern
-No concern
-No difficulties
-no difficulties
-No difficulty
-no difficulty
-No issue
-No issues
-no issue
-no issues
-normal
-Normal
-ok
-okay
-OK
-Ok
-reasonable
-Reasonable 
-Regular
-regular
-stable
-Stable
-satisfactory
-Satisfactory
-steady
-Steady
-Unremarkable
-unremarkable
-Unimpaired
-unimpaired
-</code></pre>
-
-<p>Gazateer 4: negation.lst</p>
-
-<p>This .lst file was generated to be able to interpret negation terms used with "good appetite" or "bad appetite". </p>
-
-<p>For example, "he <em>DID NOT</em> have bad appetite". I need to write JAPE to code this sentence as "NOT bad appeite"</p>
-
-<pre><code>never
-Never
-Denied
-denied
-did not
-no
-No
-denies
-Denies
-does not report
-Does not report
-not been
-not
-Not
-Not been
-never had
-Never had
-Not having 
-not having
-was not
-</code></pre>
-
-<p>Gazateer 5: symptom_gazateer.lst </p>
-
-<p>These were symptoms I wanted to <em>IGNORE</em> but which kept being mentioned with "appetite". I generate this file to then write JAPE code to ignore the below symptoms. </p>
-
-<pre><code>sleep
-Sleep
-Memory
-memory
-Concentration
-concentration
-Weight
-weight
-Depression
-depression
-depressed
-Depressed
-Energy
-energy
-Mood
-mood
-</code></pre>
+<h6>
+<a id="gazateer-5-symptom_gazateerlst" class="anchor" href="#gazateer-5-symptom_gazateerlst" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gazateer 5: symptom_gazateer.lst</h6>
 
 <p>These .lst files are then saved into a single  .def file, which looks like so:</p>
 
@@ -333,24 +140,12 @@ negation.lst:negationterms:negation
 symptom_gazateer.lst:Symptom:symptoms
 </code></pre>
 
-<p>I saved this file as appetite.def</p>
-
-<p>Notice that each of my .lst files are listed in this appetite.def file. </p>
-
-<p>Each listing is FOLLOWED BY a format similar to this:</p>
-
-<p>xxxx.lst file: yyyyyy: zzzzzz </p>
-
-<p>The "yyyyyy" and "zzzzzz" are known as MAJOR TYPE and MINOR TYPE. </p>
-
-<p>In the JAPE code, i go one to use these MAJOR TYPE and MINOR TYPE terms to give my coding more flexibility. You'll see this below. </p>
-
 <h4>
 <a id="jape-code" class="anchor" href="#jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>JAPE CODE</h4>
 
-<p>OK so now that I have my list of terms that I am confident described "good" and "bad appetite" in CRIS, I will start on JAPE code. </p>
+<p>This jape code was written after going through the Training set data (500 documents) and generating a set of "patterns" or themes in the text that appeared consistently or often in the documents, when describing appetite. </p>
 
-<p>Jape code writing - Several days pass</p>
+<p>Based on the themes I wrote the following JAPE code, in chunks. I have each chunk priority to be run, according to how often these themes were mentioned in the text.</p>
 
 <h6>
 <a id="final-jape-code" class="anchor" href="#final-jape-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>FINAL JAPE code</h6>
@@ -510,26 +305,12 @@ Priority: 6
 
 <p>These documents were annotated by two individuals to code good or bad appeite accoding to the <a href="https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png">GOLD STANDARD RULES</a>. </p>
 
-<p>Ensure that inter-rater reliability is above 85% at least to minimise erroneous performance testing. </p>
+<p>The inter-rater reliability was quite high - above 85% (but i don't have exact figures). </p>
 
 <h3>
-<a id="performance-testing" class="anchor" href="#performance-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance Testing</h3>
+<a id="final-performance" class="anchor" href="#final-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Performance</h3>
 
-<p>Testing on Gold Standard data</p>
-
-<h6>
-<a id="precision" class="anchor" href="#precision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precision:</h6>
-
-<h6>
-<a id="recall" class="anchor" href="#recall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall:</h6>
-
-<p>Comparison to Machine Learning Process using GATE machine learning:</p>
-
-<h6>
-<a id="precision-1" class="anchor" href="#precision-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precision:</h6>
-
-<h6>
-<a id="recall-1" class="anchor" href="#recall-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall:</h6>
+<p>Testing on Gold Standard data (500 documents) generated a precision of 80% and a recall of 73%.</p>
       </section>
     </div>
 
