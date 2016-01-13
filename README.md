@@ -6,7 +6,7 @@
 
 This repo is a record of my [JAPE](https://gate.ac.uk/sale/tao/splitch8.html#chap:jape) code to text mine the variable "appetite" within a bespoke psychiatric health record database, [CRIS](http://www.slam.nhs.uk/about/core-facilities/cris). 
 
-It is mainly for my own records and this archive functions as a link to send out to anyone interest. 
+It is mainly for my own records and this archive functions as a link to send out to anyone interested. 
 
 Do feel free to contact me for suggestions, questions or constructive feedback!
 
