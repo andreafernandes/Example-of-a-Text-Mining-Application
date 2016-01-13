@@ -1,11 +1,14 @@
 # appetite-textmining-code
 
 
-**Using [GATE](https://gate.ac.uk/family/) to text mine a data variable, which happens to be 'appetite'**
+**Using Text mining software - [GATE](https://gate.ac.uk/family/) - to extract a data variable from free text clinical notes.**
+
 
 This repo is a record of my [JAPE](https://gate.ac.uk/sale/tao/splitch8.html#chap:jape) code to text mine the variable "appetite" within a bespoke psychiatric health record database, [CRIS](http://www.slam.nhs.uk/about/core-facilities/cris). 
 
-It is mainly for my own benefit but do feel free to contact me for suggestions, questions or constructive feedback!
+It is mainly for my own records and this archive functions as a link to send out to anyone interest. 
+
+Do feel free to contact me for suggestions, questions or constructive feedback!
 
 
 ##About Author
@@ -22,24 +25,72 @@ It is mainly for my own benefit but do feel free to contact me for suggestions, 
 **********
 
 
-Purpose of 'Appetite Variable' -   
+**Purpose of 'Appetite Variable'**   
 This code will highlight the term 'appetite' AND any terms which collectively describe either 'good' or 'poor' appetite.
 
 
 | Data source         | [CRIS](http://www.slam.nhs.uk/about/							core-facilities/cris) - Pseudonymised 							electronic psychiatric healthcare 							records| 
 |:--------------------|:------------|
-|Data extracted       | Clinical notes with the term 							'appetite' menioned were extracted 							 and processed to be read by GATE. 							 Contact author for details on this. |
-|Text-mining software | [GATE](www.gate.ac.uk)|
+|**Data extracted**       | **Clinical notes with the term 							'appetite' menioned were extracted 							 and processed to be read by GATE. 							 Contact author for details on this.** |
+|**Text-mining software** | **[GATE](www.gate.ac.uk)**|
 
 
 *************
-##Training Data
+I followed the following steps to create a functioning code to textmine appetite from CRIS records. 
 
-The following JAPE code and [gazateers](https://gate.ac.uk/sale/tao/splitch13.html) were generated after using 500 documents, each of which had the term 'appetite' mentioned and each of which was coded by two separate annotators to describe "good" or "bad appetite". 
+1) Define Problem
 
-Rules to code appetite were generated beforehand and were kept as simple as possible: ![GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png) 
+Define and think through what it is you want to extract. Think of your variable outcome. What type of data would you like your outcome variable to display? What do you want this variable to inform you of? 
+
+Write a set of rules that 
+
+i) define your variable of interest and 
+ii) what you want out of your textmining code eventually. Give some examples.
 
 
+2) Scoping Exercise
+
+To help with understanding what it is what you want from the free-text data, conduct a scoping exercise. Go through around 500 to 1000 documents, relevant to your variable of interest. 
+
+During this exercise, familiarise yourself with how your variable of interest is being mentioned, what are common terms/words associated with this variable. What terms make your variable of interest redundant or negate the variable. 
+
+3) Re-define Problem
+
+After doing the scoping exercise, go back to your definition of and make any changes that you think will make your definition of the problem explicit. Give examples and lists of terms if you think it will help with the definition. 
+
+4) Thorough Consultation Process
+
+Set up a thorough consultation with relevant colleagues and supervisors (and experts in the field) at this point to make sure you've covered your bases with defining your variable of interest. Make any revisions at this point to your document. 
+
+**At this stage you should happy with the definition of the Variable. You should have thought about and developed resolutions to all possible scenarios in which your variable could be mentioned in free-text.**
+
+4) Extract documents for Training Set and Gold Standard. 
+
+Extract 500 documents for each set.
+
+5) Annotate Training Set and Gold Standard
+
+Based on your document from 3) annotate the Training Set and Gold Standard sets on the same day. 
+
+If the variable your interested is complicated, you should get two annotators to annotate your Training Set and check Inter-rater Reliability to minimise bias or skewed annotations. 
+
+6) Write JAPE and Create Gazateers
+
+Based on Training Set and Scoping Exercise Begin to Write JAPE and Create Necessary Gazateers. You can continuously test your JAPE and Gazateers out on smaller document sets to make sure the JAPE is doing what you want it to do. 
+
+7) Evaluate Application
+
+Test out final Gazateer list and JAPE on Gold-Standard
+
+
+
+*************
+GATE Application to Extract Appetite
+
+
+**Result of Scoping Exercise**
+
+Rules to code appetite were generated were kept as simple as possible: ![GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png) 
 
 #### GAZATEERS
 
