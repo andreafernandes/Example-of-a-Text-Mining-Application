@@ -36,9 +36,9 @@ This code will highlight the term 'appetite' AND any terms which collectively de
 
 
 *************
-I followed the following steps to create a functioning code to textmine appetite from CRIS records. 
+I followed the **following steps** to create a functioning code to textmine appetite from CRIS records. 
 
-1) Define Problem
+**1) Define Problem**
 
 Define and think through what it is you want to extract. Think of your variable outcome. What type of data would you like your outcome variable to display? What do you want this variable to inform you of? 
 
@@ -48,44 +48,44 @@ i) define your variable of interest and
 ii) what you want out of your textmining code eventually. Give some examples.
 
 
-2) Scoping Exercise
+**2) Scoping Exercise**
 
 To help with understanding what it is what you want from the free-text data, conduct a scoping exercise. Go through around 500 to 1000 documents, relevant to your variable of interest. 
 
 During this exercise, familiarise yourself with how your variable of interest is being mentioned, what are common terms/words associated with this variable. What terms make your variable of interest redundant or negate the variable. 
 
-3) Re-define Problem
+**3) Re-define Problem**
 
 After doing the scoping exercise, go back to your definition of and make any changes that you think will make your definition of the problem explicit. Give examples and lists of terms if you think it will help with the definition. 
 
-4) Thorough Consultation Process
+**4) Thorough Consultation Process**
 
 Set up a thorough consultation with relevant colleagues and supervisors (and experts in the field) at this point to make sure you've covered your bases with defining your variable of interest. Make any revisions at this point to your document. 
 
 **At this stage you should happy with the definition of the Variable. You should have thought about and developed resolutions to all possible scenarios in which your variable could be mentioned in free-text.**
 
-4) Extract documents for Training Set and Gold Standard. 
+**5) Extract documents for Training Set and Gold Standard.** 
 
 Extract 500 documents for each set.
 
-5) Annotate Training Set and Gold Standard
+**6) Annotate Training Set and Gold Standard**
 
 Based on your document from 3) annotate the Training Set and Gold Standard sets on the same day. 
 
 If the variable your interested is complicated, you should get two annotators to annotate your Training Set and check Inter-rater Reliability to minimise bias or skewed annotations. 
 
-6) Write JAPE and Create Gazateers
+**7) Write JAPE and Create Gazateers**
 
 Based on Training Set and Scoping Exercise Begin to Write JAPE and Create Necessary Gazateers. You can continuously test your JAPE and Gazateers out on smaller document sets to make sure the JAPE is doing what you want it to do. 
 
-7) Evaluate Application
+**8) Evaluate Application**
 
 Test out final Gazateer list and JAPE on Gold-Standard
 
 
 
 *************
-GATE Application to Extract Appetite
+###GATE Application to Extract Appetite
 
 
 **Result of Scoping Exercise**
