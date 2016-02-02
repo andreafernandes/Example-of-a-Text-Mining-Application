@@ -1,6 +1,6 @@
 # Text Mining for Non-Professionals. 
 
-# Example: Using Text Mining to Code someone's appetite as "good" or "bad". 
+## Basic Example: Using Text Mining to Code appetite (variable) in a dataset as "good" or "bad". 
 
 
 
