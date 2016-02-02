@@ -1,26 +1,36 @@
-# appetite-textmining-code
+# Text Mining for Non-Professionals. 
+
+# Example: Using Text Mining to Code someone's appetite as "good" or "bad". 
 
 
-**Using Text mining software - [GATE](https://gate.ac.uk/family/) - to extract a data variable from free text clinical notes.**
+
+**Using Text mining software - [GATE](https://gate.ac.uk/family/) - to extract a data variable (appetite) from free text clinical notes (and code appetite as good or bad).**
 
 
-This repo is a record of my [JAPE](https://gate.ac.uk/sale/tao/splitch8.html#chap:jape) code to text mine the variable "appetite" within a bespoke psychiatric health record database, [CRIS](http://www.slam.nhs.uk/about/core-facilities/cris). 
+This is a record of my [JAPE](https://gate.ac.uk/sale/tao/splitch8.html#chap:jape) code to text mine the variable "appetite" within a bespoke psychiatric health record database, [CRIS](http://www.slam.nhs.uk/about/core-facilities/cris). 
 
-It is mainly for my own records and this archive functions as a link to send out to anyone interested. 
-
-Do feel free to contact me for suggestions, questions or constructive feedback!
+It is mainly for my own records but also functions as a link to send out to anyone interested. 
 
 
-##About Author
-
-
-###Details and Contact Information
+####About Author
 | Author Name | Andrea Fernandes| 
-|:--------|:--------------|
+|:--------|:--------------:|
 |Occupation| PhD student, 2nd Year|
 |Email | andrea.fernandes@kcl.ac.uk|
 |University|King's College London|
 |Funding| MHRUK - Mental Health Research UK|
+
+
+
+| **Data source**     | **[CRIS](http://www.slam.nhs.uk/									about/core-facilities/cris) - 									Pseudonymised electronic 									psychiatric healthcare records** | 
+|:--------------------|:------------|
+|**Data extracted**   | **Clinical notes with the term 							'appetite' menioned were extracted 							 and processed to be read by GATE. 							 Contact author for details on this.** |
+|**Text-mining software** | **[GATE](www.gate.ac.uk)**|
+|
+|**Level of Training**| **I'd say Beginner Level**
+							|**GATE 5 day training course: Included: how to create gazateers, how to write JAPE code and run Machine Learning algorithms on GATE**|
+
+
 
 **********
 
@@ -29,57 +39,90 @@ Do feel free to contact me for suggestions, questions or constructive feedback!
 This code will highlight the term 'appetite' AND any terms which collectively describe either 'good' or 'poor' appetite.
 
 
-| Data source         | [CRIS](http://www.slam.nhs.uk/about/							core-facilities/cris) - Pseudonymised 							electronic psychiatric healthcare 							records| 
-|:--------------------|:------------|
-|**Data extracted**       | **Clinical notes with the term 							'appetite' menioned were extracted 							 and processed to be read by GATE. 							 Contact author for details on this.** |
-|**Text-mining software** | **[GATE](www.gate.ac.uk)**|
-
-
 *************
-##Basic Steps
-I followed the **following steps** to create a functioning code to textmine appetite from CRIS records. 
+##Standard Steps to Build a Text Mining Application
+I followed the following steps to create a functioning code to textmine appetite from CRIS records. 
 
-**1) Define Problem**
+I came up with these steps from a trial and error phase - trying to learn GATE (writing JAPE code), defining what I wanted the eventual produc to look like and understanding how data is recording in the data source. 
+
+So these steps may be bespoke to my learning experience but I would apply them if I ever wanted to text-mine again. 
+
+
+**1) Define the Problem/Variable**
 
 Define and think through what it is you want to extract. Think of your variable outcome. What type of data would you like your outcome variable to display? What do you want this variable to inform you of? 
 
-Write a set of rules that 
+So try to write a set of rules, which  
 
-i) define your variable of interest and 
-ii) what you want out of your textmining code eventually. Give some examples.
+ - Define your variable of interest and 
+ - Inform of what you want out of your textmining code eventually
+
+
+Make sure to give some examples, if you think this will help you define you problem/variable. 
 
 
 **2) Scoping Exercise**
 
-To help with understanding what it is what you want from the free-text data, conduct a scoping exercise. Go through around 500 to 1000 documents, relevant to your variable of interest. 
+To help with understanding what it is what you want from the free-text data (or from your dataset) and to generate tools that you'll need to build your text mining application, conduct a scoping exercise. 
 
-During this exercise, familiarise yourself with how your variable of interest is being mentioned, what are common terms/words associated with this variable. What terms make your variable of interest redundant or negate the variable. 
+Go through around 500 to 1000 documents in your dataset which contain the data that you are interested in. 
+
+During this exercise you aim is to meet each of the following:  
+
+- Familiarise yourself with how your variable of interest is being mentioned in your dataset 
+- do some exemplar coding of data; at least 500 documents
+- make a note of and develop resolutions to ant issues you think you may face
+- what are common terms/words associated with the main variable.
+- Make a List of terms/words that you come across in a .lst files
+- What terms make your variable of interest redundant or negate the variable
+- Make a list of these terms that you like your application to exclude
+
 
 **3) Re-define Problem**
 
-After doing the scoping exercise, go back to your definition of and make any changes that you think will make your definition of the problem explicit. Give examples and lists of terms if you think it will help with the definition. 
+Having done the scoping exercise, go back to your problem/variable definition. Read through it and see if you can add any extra examples, rules or notes to make your definition explicit. Give examples and lists of terms if you think it will help with the definition. 
+
 
 **4) Thorough Consultation Process**
 
-Set up a thorough consultation with relevant colleagues and supervisors (and experts in the field) at this point to make sure you've covered your bases with defining your variable of interest. Make any revisions at this point to your document. 
+Set up a thorough consultation process with relevant colleagues and supervisors (and experts in the field) to make sure you've covered your bases with: explaing your variable, defining solution to overcome each issue you face to mining this variable. Show them the document you put together and make sure they understand what is on the document. 
 
-**At this stage you should happy with the definition of the Variable. You should have thought about and developed resolutions to all possible scenarios in which your variable could be mentioned in free-text.**
+Based on feedback, make any revisions to your document.
+
+
+
+***At this point you should have:***
+
+
+- ***A clear definition of your variable (Gold Standard Rules)***
+- ***Lists: One or more lists (.lst files) of terms that describe each aspect of your variable (GATE calls these Gazateers).***
+- ***JAPE code knowledge beginner level: Make sure you have had some GATE training to start up JAPE***
+
+*If you are have the above then continue to the next steps:*
 
 **5) Extract documents for Training Set and Gold Standard.** 
 
-Extract 500 documents for each set.
+Extract 500 random documents for each set.
 
-**6) Annotate Training Set and Gold Standard**
+**6) Annotate Training Set**
 
-Based on your document from 3) annotate the Training Set and Gold Standard sets on the same day. 
+Based on your polished rules from Step 3) annotate the Training Set set.
 
-If the variable your interested is complicated, you should get two annotators to annotate your Training Set and check Inter-rater Reliability to minimise bias or skewed annotations. 
+Ideally you should get two annotators to annotate your Training Set and check Inter-rater Reliability to minimise bias or skewed annotations. If performance from this is low, then you'll need repeat Steps 1 to 5, with a second annotator input. 
 
-**7) Write JAPE and Create Gazateers**
 
-Based on Training Set and Scoping Exercise Begin to Write JAPE and Create Necessary Gazateers. You can continuously test your JAPE and Gazateers out on smaller document sets to make sure the JAPE is doing what you want it to do. 
+**7) Annotate the Gold Standard**
 
-**8) Evaluate Application**
+
+When you are happy with the training set, proceed to Annotating the Gold Standard the same way as you did with the Training set.  
+
+**8) Write JAPE and Create Gazateers**
+
+Based on your Gold Standard Rules, begin to write JAPE and make use of your lists. 
+
+You can continuously test your JAPE and Gazateers out on smaller document sets to make sure the JAPE is doing what you want it to do. Just make sure these documents are not part of the training set or the Gold Standard. 
+
+**9) Evaluate Application**
 
 Test out final Gazateer list and JAPE on Gold-Standard
 
@@ -91,7 +134,7 @@ Test out final Gazateer list and JAPE on Gold-Standard
 
 **Result of Scoping Exercise**
 
-Rules to code appetite were generated were kept as simple as possible: ![GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png) 
+I developed a simple set of rules to code appetite: ![GOLD STANDARD RULES](https://cloud.githubusercontent.com/assets/10629155/12238166/95b70598-b87a-11e5-9fe6-dcefe1bd904b.png) 
 
 #### GAZATEERS
 
@@ -100,8 +143,6 @@ A Gazateer is - basically -  a list of terms stored in a .lst file.
 I used 5 gazateers to help me pick up "good" or "bad appetite" (The list of terms were derived from scoping exercises on CRIS, whose aim was to determine the types of words used to describe appetite in CRIS). 
 
 Here's the list of .lst files I generated. These are in the "gazateer" repository: 
-
-
 
 ###### Gazateer 1: appetite_gazateer.lst file 
 
@@ -129,10 +170,7 @@ symptom_gazateer.lst:Symptom:symptoms
 
 #### JAPE CODE
 
-This jape code was written after going through the Training set data (500 documents) and generating a set of "patterns" or themes in the text that appeared consistently or often in the documents, when describing appetite. 
-
-Based on the themes I wrote the following JAPE code, in chunks. I have each chunk priority to be run, according to how often these themes were mentioned in the text.
-
+This jape code was written after going through the Training set data (500 documents) and matched each Rule from the Gold Standard document.
 
 
 ######FINAL JAPE code
@@ -287,18 +325,22 @@ Priority: 6
 
 We need to some Gold Standard data to test the above Gazateers and Code. 
 
-### Gold Standard data 
-
-500 documents extracted from CRIS. Each document contains the word "appetite"
-
-These documents were annotated by two individuals to code good or bad appeite accoding to the **GOLD STANDARD RULES**
-
-I didnt perform inter-rater reliability test because it is a simple application. 
-
+The final application was run over the Gold Standard documents. 
 
 ###Final Performance
 
 Testing on Gold Standard data (500 documents) generated a **_Precision_** of **80%** and a **_Recall_** of **73%.**
+
+
+
+********
+
+#Conclusions
+GATE is a user friendly text mining application that can be used by students, given initial introductory training. In my application above, there is room for improvement. 
+
+Further GATE machine learning applications, increased the precision to 83% and recall to 87%.
+
+
 
 
 
