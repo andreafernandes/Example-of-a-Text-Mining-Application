@@ -12,15 +12,16 @@ This is a record of my [JAPE](https://gate.ac.uk/sale/tao/splitch8.html#chap:jap
 It is mainly for my own records but also functions as a link to send out to anyone interested. 
 
 
-####About Author
-| Author Name | Andrea Fernandes| 
-|:--------|:--------------:|
-|Occupation| PhD student, 2nd Year|
-|Email | andrea.fernandes@kcl.ac.uk|
-|University|King's College London|
-|Funding| MHRUK - Mental Health Research UK|
+### About Author
 
+| Author Name | Andrea Fernandes|  
+|:--------|:--------------:| 
+|Occupation| PhD student, 2nd Year| 
+|Email | andrea.fernandes@kcl.ac.uk| 
+|University|King's College London| 
+|Funding| MHRUK - Mental Health Research UK| 
 
+ **Data source** 
 
 | **Data source**     | **[CRIS](http://www.slam.nhs.uk/									about/core-facilities/cris) - 									Pseudonymised electronic 									psychiatric healthcare records** | 
 |:--------------------|:------------|
