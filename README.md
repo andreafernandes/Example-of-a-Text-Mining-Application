@@ -28,7 +28,7 @@ It is mainly for my own records but also functions as a link to send out to anyo
 |**Data extracted**   | **Clinical notes with the term 							'appetite' menioned were extracted 							 and processed to be read by GATE. 							 Contact author for details on this.** |
 |**Text-mining software** | **[GATE](www.gate.ac.uk)**|
 |
-|**Level of Training**| **I'd say Beginner Level**
+|**Level of Training**| **Beginner Level**
 							|**GATE 5 day training course: Included: how to create gazateers, how to write JAPE code and run Machine Learning algorithms on GATE**|
 
 
